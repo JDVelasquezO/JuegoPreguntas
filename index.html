@@ -53,8 +53,9 @@
     <div class="card-panel team-card">Equipo B: <span id="scoreB">0</span> <span id="strikesB" class="strikes"></span></div>
   </div>
 
-  <button class="btn amber accent-4 waves-effect waves-light modal-trigger" data-target="strikeModal">❌ Añadir X</button>
+  <button class="btn red accent-4 waves-effect waves-light modal-trigger" data-target="strikeModal">❌ Añadir X</button>
   <button class="btn green darken-2 waves-effect waves-light" onclick="nextQuestion()">Siguiente Pregunta</button>
+  <button class="btn orange darken-2 waves-effect waves-light" onclick="reload()">Reiniciar Juego</button>
 
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -160,6 +161,10 @@
       setTimeout(() => {
         bigX.classList.remove('show');
       }, 1300);
+    }
+
+    function reload() {
+      location.reload();
     }
   </script>
 </body>
