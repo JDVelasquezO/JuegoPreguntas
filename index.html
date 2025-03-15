@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Personas Dijeron</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #7300ff; color: #000000; font-weight: bold; }
+    .question { font-size: 50px; margin: 20px 0; background: #c51162; color: #ffffff; padding: 10px; border-radius: 10px; }
+    .answers { display: grid; gap: 10px; max-width: 400px; margin: 0 auto; }
+    .answer { background: #ffd600; padding: 10px; border-radius: 10px; cursor: pointer; color: #000; font-weight: bold; }
+    .revealed { background: #7bff00; color: #000; }
+    .teams { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+    .team-card { flex: 1; min-width: 150px; margin: 10px; background: #c51162; color: #ffffff; padding: 10px; border-radius: 10px; font-size: 24px; }
+    .strikes { color: #ffd600; font-size: 24px; }
+    @media (max-width: 600px) {
+      .question { font-size: 24px; }
+      .answers { grid-template-columns: 1fr; }
+      .teams { flex-direction: column; }
+    }
+    .big-x-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .big-x-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .big-x-image {
+      width: 100%;
+      max-width: 900px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="white-text text-accent-4">100 Personas Dijeron</h1>
+  <div class="question card-panel">???</div>
+  <div class="answers"></div>
+  <div class="teams">
+    <div class="card-panel team-card">Equipo A: <span id="scoreA">0</span> <span id="strikesA" class="strikes"></span></div>
+    <div class="card-panel team-card">Equipo B: <span id="scoreB">0</span> <span id="strikesB" class="strikes"></span></div>
+  </div>
+
+  <button class="btn amber accent-4 waves-effect waves-light modal-trigger" data-target="strikeModal">❌ Añadir X</button>
+  <button class="btn green darken-2 waves-effect waves-light" onclick="nextQuestion()">Siguiente Pregunta</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>¿A qué equipo asignas los puntos?</p>
+      <button class="btn blue accent-3" onclick="assignPoints('A')">Equipo A</button>
+      <button class="btn purple darken-2" onclick="assignPoints('B')">Equipo B</button>
+    </div>
+  </div>
+
+  <div id="strikeModal" class="modal">
+    <div class="modal-content">
+      <p>¿A qué equipo asignas la X?</p>
+      <button class="btn blue accent-3" onclick="addStrike('A')">Equipo A</button>
+      <button class="btn purple darken-2" onclick="addStrike('B')">Equipo B</button>
+    </div>
+  </div>
+
+  <div id="bigX" class="big-x-overlay">
+    <img src="https://static.vecteezy.com/system/resources/previews/035/047/942/non_2x/red-x-mark-symbol-grungy-free-png.png" alt="X" class="big-x-image">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let currentElement = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const modals = document.querySelectorAll('.modal');
+      M.Modal.init(modals);
+      loadQuestions();
+    });
+
+    async function loadQuestions() {
+      const response = await fetch('preguntas.json');
+      questions = await response.json();
+      showQuestion();
+    }
+
+    function showQuestion() {
+      if (currentQuestionIndex >= questions.length) {
+        alert('No hay más preguntas.');
+        return;
+      }
+
+      const question = questions[currentQuestionIndex];
+      document.querySelector('.question').textContent = question.question;
+
+      const answersContainer = document.querySelector('.answers');
+      answersContainer.innerHTML = '';
+
+      question.answers.forEach(answer => {
+        const div = document.createElement('div');
+        div.classList.add('answer', 'card-panel', 'hoverable');
+        div.dataset.answer = answer.text;
+        div.dataset.points = answer.points;
+        div.textContent = '???';
+        div.onclick = () => openModal(div);
+        answersContainer.appendChild(div);
+      });
+
+      document.getElementById('strikesA').textContent = '';
+      document.getElementById('strikesB').textContent = '';
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+      showQuestion();
+    }
+
+    function openModal(element) {
+      if (!element.classList.contains('revealed')) {
+        currentElement = element;
+        const modal = M.Modal.getInstance(document.getElementById('modal'));
+        modal.open();
+      }
+    }
+
+    function assignPoints(team) {
+      if (currentElement) {
+        currentElement.classList.add('revealed');
+        currentElement.textContent = `${currentElement.dataset.answer} - ${currentElement.dataset.points} puntos`;
+
+        const scoreElement = document.getElementById(`score${team}`);
+        scoreElement.textContent = parseInt(scoreElement.textContent) + parseInt(currentElement.dataset.points);
+      }
+      const modal = M.Modal.getInstance(document.getElementById('modal'));
+      modal.close();
+      currentElement = null;
+    }
+
+    function addStrike(team) {
+      const strikesElement = document.getElementById(`strikes${team}`);
+      strikesElement.textContent += '❌';
+      const modal = M.Modal.getInstance(document.getElementById('strikeModal'));
+      modal.close();
+      showBigX();
+    }
+
+    function showBigX() {
+      const bigX = document.getElementById('bigX');
+      bigX.classList.add('show');
+      setTimeout(() => {
+        bigX.classList.remove('show');
+      }, 1300);
+    }
+  </script>
+</body>
+</html>

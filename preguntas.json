@@ -1,0 +1,215 @@
+[
+  {
+    "question": "1. ¿Cuáles son los versículos bíblicos más memorizados?",
+    "answers": [
+      { "text": "Juan 3:16", "points": 50 },
+      { "text": "Salmo 23:1", "points": 40 },
+      { "text": "Filipenses 4:13", "points": 30 },
+      { "text": "Mateo 22:37", "points": 20 }
+    ]
+  },
+  {
+    "question": "2. ¿Cuáles son las declaraciones de \"YO SOY\" que dijo Jesús?",
+    "answers": [
+      { "text": "El camino, la verdad y la vida", "points": 50 },
+      { "text": "El buen pastor", "points": 40 },
+      { "text": "La luz del mundo", "points": 30 },
+      { "text": "La resurrección y la vida", "points": 20 }
+    ]
+  },
+  {
+    "question": "3. ¿Qué montes son más conocidos en la Biblia?",
+    "answers": [
+      { "text": "Sinaí", "points": 50 },
+      { "text": "Calvario", "points": 40 },
+      { "text": "Horeb", "points": 30 },
+      { "text": "Moria", "points": 20 }
+    ]
+  },
+  {
+    "question": "4. ¿Cuáles son los milagros más conocidos de Jesús?",
+    "answers": [
+      { "text": "Resurrección de Lázaro", "points": 50 },
+      { "text": "Multiplicación de los panes y los peces", "points": 40 },
+      { "text": "Sanación del leproso", "points": 30 },
+      { "text": "Conversión del agua en vino", "points": 20 }
+    ]
+  },
+  {
+    "question": "5. ¿Quiénes fueron los reyes más famosos de Israel?",
+    "answers": [
+      { "text": "David", "points": 50 },
+      { "text": "Saúl", "points": 40 },
+      { "text": "Salomón", "points": 30 },
+      { "text": "Josafat", "points": 20 }
+    ]
+  },
+  {
+    "question": "6. ¿Cuáles son los salmos más populares?",
+    "answers": [
+      { "text": "Salmo 23", "points": 50 },
+      { "text": "Salmo 91", "points": 40 },
+      { "text": "Salmo 100", "points": 30 },
+      { "text": "Salmo 150", "points": 20 }
+    ]
+  },
+  {
+    "question": "7. ¿Cuáles son las parejas más conocidas de la Biblia?",
+    "answers": [
+      { "text": "Isaac y Rebeca", "points": 50 },
+      { "text": "José y María", "points": 40 },
+      { "text": "Zacarías y Elisabet", "points": 30 },
+      { "text": "Jacob y Raquel", "points": 20 }
+    ]
+  },
+  {
+    "question": "8. ¿Cuáles son las ciudades más conocidas de la Biblia?",
+    "answers": [
+      { "text": "Jerusalén", "points": 50 },
+      { "text": "Nazaret", "points": 40 },
+      { "text": "Babilonia", "points": 30 },
+      { "text": "Damasco", "points": 20 }
+    ]
+  },
+  {
+    "question": "9. ¿Quiénes son las personas más conocidas de la Biblia?",
+    "answers": [
+      { "text": "Jesús", "points": 50 },
+      { "text": "Moisés", "points": 40 },
+      { "text": "Abraham", "points": 30 },
+      { "text": "Pablo", "points": 20 },
+      { "text": "Elías", "points": 10 }
+    ]
+  },
+  {
+    "question": "10. ¿Cuáles fueron las plagas que Dios envió a Egipto?",
+    "answers": [
+      { "text": "Oscuridad sobre la tierra", "points": 50 },
+      { "text": "Muerte de los primogénitos egipcios", "points": 40 },
+      { "text": "Mosquitos y moscas", "points": 30 },
+      { "text": "El agua del Nilo convertida en sangre", "points": 20 },
+      { "text": "Granizo que destruyó los campos y cosechas", "points": 10 },
+      { "text": "Invasión de langostas", "points": 5 }
+    ]
+  },
+  {
+    "question": "11. Además de María, ¿qué otras mujeres se mencionan en la Biblia?",
+    "answers": [
+      { "text": "Ester", "points": 50 },
+      { "text": "Lea", "points": 40 },
+      { "text": "Débora", "points": 30 },
+      { "text": "Raquel", "points": 20 },
+      { "text": "Sara", "points": 10 },
+      { "text": "Rut", "points": 5 }
+    ]
+  },
+  {
+    "question": "12. ¿Quiénes fueron profetas del Antiguo Testamento?",
+    "answers": [
+      { "text": "Jeremías", "points": 50 },
+      { "text": "Ezequiel", "points": 40 },
+      { "text": "Isaías", "points": 30 },
+      { "text": "Elías", "points": 20 },
+      { "text": "Samuel", "points": 10 }
+    ]
+  },
+  {
+    "question": "13. Además de David, ¿qué otros reyes menciona la Biblia?",
+    "answers": [
+      { "text": "Salomón", "points": 50 },
+      { "text": "Saúl", "points": 40 },
+      { "text": "Herodes", "points": 30 },
+      { "text": "Ezequías", "points": 20 }
+    ]
+  },
+  {
+    "question": "14. ¿Cuáles son los libros más conocidos de la Biblia?",
+    "answers": [
+      { "text": "Proverbios", "points": 50 },
+      { "text": "Salmos", "points": 40 },
+      { "text": "Éxodo", "points": 30 },
+      { "text": "Génesis", "points": 20 }
+    ]
+  },
+  {
+    "question": "15. ¿Cómo se estructura la Biblia?",
+    "answers": [
+      { "text": "Pentateuco", "points": 50 },
+      { "text": "Libros históricos", "points": 40 },
+      { "text": "Libros poéticos", "points": 30 },
+      { "text": "Profetas mayores", "points": 20 },
+      { "text": "Profetas menores", "points": 10 }
+    ]
+  },
+  {
+    "question": "16. ¿Qué hermanos se mencionan en la Biblia?",
+    "answers": [
+      { "text": "Caín y Abel", "points": 50 },
+      { "text": "Aarón y Moisés", "points": 40 },
+      { "text": "José y Benjamín", "points": 30 },
+      { "text": "Jacob y Esaú", "points": 20 },
+      { "text": "Raquel y Lea", "points": 10 }
+    ]
+  },
+  {
+    "question": "17. ¿Qué acontecimientos menciona el libro de Apocalipsis?",
+    "answers": [
+      { "text": "El juicio de Dios", "points": 50 },
+      { "text": "La segunda venida de Jesucristo", "points": 40 },
+      { "text": "Las dos bestias", "points": 30 },
+      { "text": "Las siete trompetas", "points": 20 },
+      { "text": "La mujer y el dragón", "points": 10 }
+    ]
+  },
+  {
+    "question": "18. ¿Qué instrumentos musicales se mencionan en la Biblia?",
+    "answers": [
+      { "text": "Arpas", "points": 50 },
+      { "text": "Trompetas", "points": 40 },
+      { "text": "Panderetas", "points": 30 },
+      { "text": "Cuernos", "points": 20 },
+      { "text": "Flautas", "points": 10 }
+    ]
+  },
+  {
+    "question": "19. ¿Quiénes fueron jueces en la Biblia?",
+    "answers": [
+      { "text": "Sansón", "points": 50 },
+      { "text": "Débora", "points": 40 },
+      { "text": "Gedeón", "points": 30 },
+      { "text": "Tola", "points": 20 },
+      { "text": "Otoniel", "points": 10 }
+    ]
+  },
+  {
+    "question": "20. ¿Quiénes fueron los apóstoles de Jesús?",
+    "answers": [
+      { "text": "Pedro", "points": 50 },
+      { "text": "Santiago", "points": 40 },
+      { "text": "Juan", "points": 30 },
+      { "text": "Judas Iscariote", "points": 20 },
+      { "text": "Mateo", "points": 10 },
+      { "text": "Tomás", "points": 5 },
+      { "text": "Simón", "points": 5 }
+    ]
+  },
+  {
+    "question": "21. ¿Cuáles son los frutos del Espíritu?",
+    "answers": [
+      { "text": "Amor", "points": 50 },
+      { "text": "Gozo", "points": 40 },
+      { "text": "Paz", "points": 30 },
+      { "text": "Paciencia", "points": 20 },
+      { "text": "Benignidad", "points": 10 },
+      { "text": "Mansedumbre", "points": 5 },
+      { "text": "Bondad", "points": 5 }
+    ]
+  },
+  {
+    "question": "22. ¿Qué animales hablaron según la Biblia?",
+    "answers": [
+      { "text": "La serpiente", "points": 50 },
+      { "text": "La mula de Balaam", "points": 40 }
+    ]
+  }
+]
